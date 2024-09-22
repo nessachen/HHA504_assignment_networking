@@ -2,26 +2,38 @@
 
 ## 1. Create a Virtual Private Cloud (VPC)
 ### GCP
+![GCP-Vnet-config](https://github.com/user-attachments/assets/13b1f196-98e4-4256-9f9b-f1e0bd195e24)
+![GCP-Vnet-config](https://github.com/user-attachments/assets/75ee7552-8359-4d01-8656-3cae2f503c90)
+![GCP-Vnet-config](https://github.com/user-attachments/assets/2aa8d7b1-e57b-45a2-846a-3c2bf8b8048e)
+![GCP-Vnet-config](https://github.com/user-attachments/assets/257b70e4-08c0-49d2-a89e-d16c4929b71c)
+- I went to GCP and searched for VPC networks. Then, I pressed Then, I pressed create and started setting the configurations. For the name, I wanted it to reflect the homework assignment. I left MTU as its default option of 1460 and subnet creation mode as its default option of custom, while leaving pricate IPv6 address settings checkbox as unselected. Next, for subnets, I set the name to reflect the homework assignment and chose the region as east US. I left the IP stack type as IPv4 and made the range as 10.0.0.0/24. For the remaining options of private google access, flow logs, and hybrid subet, I left them all as the default option of off. In the firewall rules section, I did not select any of the options because I was not sure what they implied and thought it was best to leave it untouched. Furthermore, for dyanmic routing mode, I left it as refional and chose the default option of legacy for best path selection mode. After pressing create, the VPC network successfully deployed.
 ### Azure
-![Azure-VNet-Config](https://github.com/user-attachments/assets/bbcb7d46-9a28-48c4-a56e-597ab46c590e)
-![Azure-VNet-Deployed](https://github.com/user-attachments/assets/9d672afe-1743-4c2f-8ffa-712fae5449ab)
+![Azure-VNet-config](https://github.com/user-attachments/assets/bbcb7d46-9a28-48c4-a56e-597ab46c590e)
+![Azure-VNet-deployed](https://github.com/user-attachments/assets/9d672afe-1743-4c2f-8ffa-712fae5449ab)
 - I went to the Azure portal and searched for virtual networks. Then, I pressed create and started setting the configurations. I made sure it was under the correct subscription and resource group. For the name, I wanted it to reflect the homework assignment and chose the region as East US. Next, for the secruity configurations, I did not select any of the options because I was scared to incur extra cost. Furthermore, for IP addresses, I left it as the default options of 10.0.0.0/16 and 10.0.0.0. And, I did not input any tags for the virtual network. After pressing create, the virual network successfully deployed.
-### GCP
-
 
 ## 2. Assign a Dedicated IP
 ### GCP
+![](https://github.com/user-attachments/assets/f9a0b5ef-eee3-40b5-9c0f-9456199d1165)
+![](https://github.com/user-attachments/assets/c2a7c2b3-0443-4514-8f98-05eb45a6828f)
+![](https://github.com/user-attachments/assets/633e9b25-52ab-41e9-8c7f-8ad41ca01440)
+![](https://github.com/user-attachments/assets/5c929997-7517-44fa-a5de-7a0504eb93cf)
+![](https://github.com/user-attachments/assets/70cc38e7-c38d-42fd-b6db-83cb5bc30dbd)
+- After creating the VPC network, I went to create the VM instance as we learned in class and I realized the pages to set configurations looked different than before. For the name, I wanted it to reflect the homework assignment. Then, I chose a east US region and left any as the option for zone. I changed the VM provisioning model to spot, selected delete for on VM termination, and left host error timeout as the default option of unspecified. Next, for machine configuration, I left the series as E2 but changed e2-medium to e2-micro. Under OS and storage, I made sure to change the image type to Ubuntu. For networking, the layout of the page appears different than before. I am assuming it is due to creating the VPC network in the previous step. I selected the options of allowing HTTPS and HTTP traffic for firewall while leaving the other configurations as unselected until network interfaces. I was permitted to choose the dropdown and select the VPC network and subnetwork created in the previous step. It was really interesting how in the same section I was also able to reserve a static external IP address and I made the name of the static external IP address reflect the homework assignment. After that, for the remaining fields, I left them either as the default options or as unselected and then pressed create, which allowed for successful deployment.
 ### Azure
 ![Azure-IP_config](https://github.com/user-attachments/assets/8c72586b-853e-48fd-84dd-74ecdf58cca8)
 ![Azure-IP-deployed](https://github.com/user-attachments/assets/4b6d5474-4ffc-4b75-8c66-7d81b6b32b56)
-- After creating the virtual network, I searched public IP addresses. I pressed create and started setting the configurations. I made sure it was under the correct subscription and resource group. For the name, I wanted it to reflect the homework assignment and I left the IP version as the default option of IPv4. Then, for SKU, I chose the basic option instead of standard and left the IP address assignment as static. For DNS name label, I was not sure what to input so I left it blank. Next, for idle timeout (minutes) and domain name label scope (preview), I left them as the default configurations of 4 minutes and none. After pressing create, the public IP address successfully deployed. However, I am not sure if I correctly completed this step because the instructions said to create the static public IP address for a resource within the VNet. And, I am not sure how to accurately execute the steps needed to precisely create the static public IP address for a resource within the VNet.
-### GCP
-
+- After creating the virtual network, I searched public IP addresses. I pressed create and started setting the configurations. I made sure it was under the correct subscription and resource group. For the name, I wanted it to reflect the homework assignment and I left the IP version as the default option of IPv4. Then, for SKU, I chose the basic option instead of standard and left the IP address assignment as static. For DNS name label, I was not sure what to input so I left it blank. Next, for idle timeout (minutes) and domain name label scope (preview), I left them as the default configurations of 4 minutes and none. After pressing create, the public IP address successfully deployed. However, I am not sure if I correctly completed this step because I reread the instructions and it said to create the static public IP address for a resource within the VNet. And, I am not sure how to accurately execute the steps needed to precisely create the static public IP address for a resource within the VNet because for the last homework assignment we were unable to create a virtual machine on Azure.
 
 ## 3. Map IP to a Domain
 ### GCP
+![](https://github.com/user-attachments/assets/d11cfee9-412f-4b93-9809-c8c339a5b9ff)
+![](https://github.com/user-attachments/assets/afef795e-9715-4f71-951f-e72734a820ee)
+![](https://github.com/user-attachments/assets/30817d09-c2ee-4243-aff0-2469375fe0c6)
+![](https://github.com/user-attachments/assets/df682d11-7ac4-4257-a849-0769c21fecc1)
+![](https://github.com/user-attachments/assets/0cd10d38-85e5-4a11-92a5-4c2d8e44cf15)
+- After creating the VM instance and assigned the IP, I searched for cloud DNS and I actually had to enable it first. Then, I pressed create and started with leaving the zone type as public. For zone name and DNS name, I wanted it to reflect the homework assignment. Next, for DNSSEC and cloud logging, I left them both as the default options of off and pressed create. For mapping an IP to a domain, I was not sure what steps to take to complete the task so I tried researching for resources and will assume that I took the right steps to map the IP to the domain. The next thing I did was press add standard on the cloud DNS page. I was then prompted to enter a DNS name and all I did was input `www`. For the remaining sections of resource record type, TTL, and TTL unit I left them as the default options. When it came to the field of IPv4 address 1, I was able to press select and choose the IP address created from making the VPC network and VM instance. Notably, to complete the homework assignment, I found GCP to be really straightforward but at the same time I think I might have completed the wrong steps for the Azure portion. 
 ### Azure
 ![Azure-DNS-basic-config](https://github.com/user-attachments/assets/f1fa1c3f-1af0-4876-b227-9d23c44f4c29)
 ![Azure-DNS-zone](https://github.com/user-attachments/assets/afb5dac5-6e70-44a0-bdd3-48fbf5ab1c86)
 - After creating the public IP address, I searched DNS zones. I pressed create and started setting the configurations. I made sure it was under the correct subscription and resource group. For the name, I wanted it to reflect the homework assignment. Then, when reaching the next page of DNS zone editor, it said to upload a DNS zone file and copy my DNS zone into line 1. I am not sure how to complete the prompts on the DNS zone editor page and the purpose of the prompts, though I would assume it would help map the IP address to a domain. I tried researching for resources that could help me complete this step, but I still remain confused on how to map the IP address to a domain using the DNS zone feature.
-
